@@ -14,9 +14,9 @@ import javax.swing.JOptionPane;
  */
 public class AntrianPasien {
 
-    private int tanggalAntrian;
-    private int bulanAntrian;
-    private int tahunAntrian;
+     int tanggalAntrian;
+     int bulanAntrian;
+     int tahunAntrian;
     private Klinik klinik;
     private final int jumlah_maksimal_pasien = 50;
     private Pasien[] daftarPasien = new Pasien[jumlah_maksimal_pasien];

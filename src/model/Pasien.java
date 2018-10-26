@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,9 +22,8 @@ import java.util.logging.Logger;
  *
  * @author Aldy
  */
-public class Pasien {
+public class Pasien implements Serializable {
 
-    private String noRekamMedis;
     private String nama;
     private String alamat;
     private String tempatLahir;
@@ -50,23 +50,6 @@ public class Pasien {
 
     public Pasien(String nama) {
         this.nama = nama;
-
-    }
-
-    public String getNoRekamMedis() {
-        return noRekamMedis;
-    }
-
-    /**
-     * fungsi ini bertujuan untuk mengatur nomor rekam medis, dimana kode atau
-     * nomor rekam medis harus lebih dari 6 digit, jika tidak maka akan
-     * menampilkan outputan Nomor Rekam Salah.
-     *
-     * @param noRekamMedis
-     */
-    public void setNoRekamMedis(String noRekamMedis) {
-
-        this.noRekamMedis = noRekamMedis;
 
     }
 
@@ -196,7 +179,7 @@ public class Pasien {
     public static Pasien cariPasien(String rekamMedis) {
 
         for (int i = 0; i < daftarPasien.size(); i++) {
-            if (daftarPasien.get(i).getNoRekamMedis() == null ? rekamMedis == null : daftarPasien.get(i).getNoRekamMedis().equals(rekamMedis)) {
+            if (daftarPasien.get(i).getNoRM() == null ? rekamMedis == null : daftarPasien.get(i).getNoRM().equals(rekamMedis)) {
                 return daftarPasien.get(i);
             }
         }

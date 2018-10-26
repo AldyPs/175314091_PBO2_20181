@@ -22,7 +22,7 @@ public class main {
             aldy.setTahunLahir(1999);
             aldy.setTempatLahir("Palangka Raya");
             aldy.setAlamat("Jogjakarta");
-            aldy.setNoRekamMedis(aldy.nomorRekamMedis());
+            aldy.setNoRM(aldy.nomorRekamMedis());
 
             dok.setTanggalLahir(4);
             dok.setBulanLahir(12);
@@ -42,7 +42,7 @@ public class main {
         System.out.println("Tanggal Lahir\t:" + aldy.getTanggalLahir() + "" + aldy.getBulanLahir() + "" + aldy.getTahunLahir());
         System.out.println("Tempat Lahir\t:" + aldy.getTempatLahir());
         System.out.println("Alamat\t\t:" + aldy.getAlamat());
-        System.out.println("No Rekam Medis\t:" + aldy.getNoRekamMedis());
+        System.out.println("No Rekam Medis\t:" + aldy.getNoRM());
         System.out.println("--------------------");
         System.out.println("");
 
